@@ -52,9 +52,9 @@ function rgb(r, g, b) {
 
 function hex(h) {
   h = h.toString().toUpperCase();
-  var r = h.charAt(1) + h.charAt(2);
-  var g = h.charAt(3) + h.charAt(4);
-  var b = h.charAt(4) + h.charAt(6);
+  var r = h.substring(2,4);
+  var g = h.substring(4,6);
+  var b = h.substring(6,8);
   r = parseInt(r, 16).toString();
   g = parseInt(g, 16).toString();
   b = parseInt(b, 16).toString();
@@ -62,7 +62,7 @@ function hex(h) {
   r=r.padStart(3, "0");
   g=g.padStart(3, "0");
   b=b.padStart(3, "0");
-var he=[r,g,b];
+var he=r+g+b;
   return he;
 }
 
